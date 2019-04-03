@@ -97,7 +97,7 @@ setalbums(10,next_offset)
 
 
 function setalbums(limit,offset){
-$.getJSON('https://graph.facebook.com/v2.12/168180967031542/albums?fields=created_time,name,id,description,cover_photo,link&limit='+limit+'&offset='+offset+'&access_token=EAABZBstjNtoQBANs3MPZAlPtpLVZBoDiN5OlEkcp1WJgSseSloIqXA1SbWVz8FSJTTYBpelIdktAvo8IXF5ZBRroF9hFLKRnBpzmTwd4Kqy9X9PnNonruaLS1tt7F17T5bgZA8EWP26ZB1gCKx7bWt2wuL16UIZCUUZD&callback=?', function(json, status, xhr) { console.log(json);
+$.getJSON('https://graph.facebook.com/v2.12/168180967031542/albums?fields=created_time,name,id,description,cover_photo,link&limit='+limit+'&offset='+offset+'&access_token=EAABZBstjNtoQBAGZAXTGmCzstirzdZC9rS62T7tkwqjaTDk7jfRYDjFrElN28qopaFq2Kr3IhBWeLZBzPqC9OCCMqCCNI4WaQ7feIZBFBVIVNvYEHo38LlTxDdAX20zV375xZAqei4OZAZCUuXYleZApspIC2jzJbK65SoZB1h7TGmI4wlBsZBr8Vhu&callback=?', function(json, status, xhr) { console.log(json);
         var n=json.data;
         var str="";
 	for(var x=0;x<n.length;x++){
@@ -112,7 +112,7 @@ $.getJSON('https://graph.facebook.com/v2.12/168180967031542/albums?fields=create
 }
 
 function getcover_photo(id,name){
-$.getJSON('https://graph.facebook.com/v2.12/'+id+'/photos?fields=album,height,source&limit=1&access_token=EAABZBstjNtoQBANs3MPZAlPtpLVZBoDiN5OlEkcp1WJgSseSloIqXA1SbWVz8FSJTTYBpelIdktAvo8IXF5ZBRroF9hFLKRnBpzmTwd4Kqy9X9PnNonruaLS1tt7F17T5bgZA8EWP26ZB1gCKx7bWt2wuL16UIZCUUZD&callback=?', function(json, status, xhr) { console.log(json);
+$.getJSON('https://graph.facebook.com/v2.12/'+id+'/photos?fields=album,height,source&limit=1&access_token=EAABZBstjNtoQBAGZAXTGmCzstirzdZC9rS62T7tkwqjaTDk7jfRYDjFrElN28qopaFq2Kr3IhBWeLZBzPqC9OCCMqCCNI4WaQ7feIZBFBVIVNvYEHo38LlTxDdAX20zV375xZAqei4OZAZCUuXYleZApspIC2jzJbK65SoZB1h7TGmI4wlBsZBr8Vhu&callback=?', function(json, status, xhr) { console.log(json);
           var n = json.data;
 
           	var source=n[0].source;
@@ -134,7 +134,7 @@ $.getJSON('https://graph.facebook.com/v2.12/'+id+'/photos?fields=album,height,so
 
 		function getPhotos(id){
 			setcont(2);
-			$.getJSON('https://graph.facebook.com/v2.12/'+id+'/photos?fields=album,height,source&access_token=EAABZBstjNtoQBANs3MPZAlPtpLVZBoDiN5OlEkcp1WJgSseSloIqXA1SbWVz8FSJTTYBpelIdktAvo8IXF5ZBRroF9hFLKRnBpzmTwd4Kqy9X9PnNonruaLS1tt7F17T5bgZA8EWP26ZB1gCKx7bWt2wuL16UIZCUUZD&callback=?', function(json, status, xhr) {
+			$.getJSON('https://graph.facebook.com/v2.12/'+id+'/photos?fields=album,height,source&access_token=EAABZBstjNtoQBAGZAXTGmCzstirzdZC9rS62T7tkwqjaTDk7jfRYDjFrElN28qopaFq2Kr3IhBWeLZBzPqC9OCCMqCCNI4WaQ7feIZBFBVIVNvYEHo38LlTxDdAX20zV375xZAqei4OZAZCUuXYleZApspIC2jzJbK65SoZB1h7TGmI4wlBsZBr8Vhu&callback=?', function(json, status, xhr) {
           var n = json.data;
         var str="";
           for (var i = 0, l = n.length - 1; i < l; i++) {
