@@ -32,7 +32,8 @@
   gtag('config', 'UA-117098532-1');
 </script>  
 <script type='text/javascript'>
-setTimeout(function(){
+function timeoutt(){ 
+  setTimeout(function(){
 document.querySelector('body').innerHTML=`
 <center><pre>
 Opps....
@@ -42,9 +43,10 @@ Thank you
   </pre></center>
 `;
 },200);
- </script>
+}
+  </script>
 </head>
-<body>
+<body onload='timeoutt()'>
   <section class="menu cid-qOptpmRKFt" once="menu" id="menu2-0">
 
     
